@@ -11,6 +11,7 @@
 #import "YouTableViewCell.h"
 #import "HintLabel.h"
 #import "HeadView.h"
+#import "IMLogicModel.h"
 
 #define MeCellID @"MeCellID"
 #define YouCellID @"YouCellID"
@@ -150,24 +151,10 @@
         youCell = [[[NSBundle mainBundle] loadNibNamed:@"YouTableViewCell" owner:self options:nil] lastObject];
     }
     
-    switch (indexPath.section) {
-        case 0:
-            return youCell;
-            break;
-        case 1:
-            return youCell;
-            break;
-        case 2:
-            return youCell;
-            break;
-        case 3:
-            return meCell;
-            break;
-        case 4:
-            return youCell;
-            break;
-        default:
-            break;
+    if ([IMLogicModel IMTableViewCellStyleWithCand:indexPath.section] == IMTableViewCellStyleRight){
+        return meCell;
+    }else{
+        return youCell;
     }
     
     return meCell;
@@ -187,11 +174,12 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if (section == 4) {
-        self.hitLabel = [[HintLabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 62)];
-        
-        [self.hitLabel show];
     
+    if ([IMLogicModel hintShowWithSection:section]) {
+        self.hitLabel = [[HintLabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 62)];
+
+        [self.hitLabel show];
+
         return self.hitLabel;
     }
     

@@ -1,0 +1,47 @@
+//
+//  PrefixHeader.pch
+//  viewText
+//
+//  Created by wuhaidong on 2018/4/23.
+//  Copyright © 2018年 wuhaidong. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+//第三方
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+
+//Categories
+#import "NSString+Time.h"
+#import "UIButton+Style.h"
+#import "UIColor+HexString.h"
+#import "UIImage+Exten.h"
+#import "UIImage+Image.h"
+#import "UILabel+Utils.h"
+#import "UIFont+SelectFrame.h"
+#import "UIView+BorderLine.h"
+#import "UIView+ReRect.h"
+
+#import "ViewText_Header.h"
+#import "ViewText_Define_Header.h"
+
+
+
+#endif
+
+
+//加强版打印
+#ifdef DEBUG
+# define NSLog(fmt, ...) NSLog((@"🦋🦋🦋🦋🦋🦋🦋\n[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n☘☘☘☘☘☘☘" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+# define NSLog(...)
+#endif
+
+#endif /* PrefixHeader_pch */
