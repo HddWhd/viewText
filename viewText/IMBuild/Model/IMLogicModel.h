@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class IMDataModel;
 
 typedef enum : NSUInteger {//枚举判断展示回复或接受的cell
     IMTableViewCellStyleLeft,
@@ -17,4 +18,6 @@ typedef enum : NSUInteger {//枚举判断展示回复或接受的cell
 + (BOOL) hintShowWithSection:(NSInteger )section;//是否展示提示内容
 
 + (IMTableViewCellStyle )IMTableViewCellStyleWithCand:(NSInteger )section;//返回left or right
+
++ (NSMutableArray<IMDataModel *> *)urlWithCellHeight:(CGFloat )height;
 @end

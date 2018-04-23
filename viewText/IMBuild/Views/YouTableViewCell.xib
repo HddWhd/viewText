@@ -49,7 +49,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W8R-LA-Aen">
                                 <rect key="frame" x="0.0" y="0.0" width="140" height="40"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恩恩恩恩恩恩恩" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ih-tX-trS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="askdhsiudfhsdhfishdifgsidfhiush" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ih-tX-trS">
                                 <rect key="frame" x="6" y="6" width="128" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,6 +69,12 @@
                             <constraint firstAttribute="trailing" secondItem="W8R-LA-Aen" secondAttribute="trailing" id="plh-bJ-KcA"/>
                             <constraint firstAttribute="width" constant="140" id="w72-Qp-J7E"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
@@ -81,6 +87,13 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="youBasicHeight" destination="XnZ-Kv-kLE" id="FKx-7I-LP7"/>
+                <outlet property="youBasicView" destination="KVW-Bq-76f" id="RmL-y1-edE"/>
+                <outlet property="youBasicWidth" destination="w72-Qp-J7E" id="ccO-Mz-C4n"/>
+                <outlet property="youContentString" destination="9Ih-tX-trS" id="hAJ-Ml-cfd"/>
+                <outlet property="youRootImage" destination="W8R-LA-Aen" id="ZPi-Uk-GZr"/>
+            </connections>
             <point key="canvasLocation" x="41" y="79.5"/>
         </tableViewCell>
     </objects>

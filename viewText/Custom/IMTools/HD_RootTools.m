@@ -6,9 +6,9 @@
 //  Copyright © 2017年 wuhaidong. All rights reserved.
 //
 
-#import "DJQ_RootTools.h"
+#import "HD_RootTools.h"
 
-@implementation DJQ_RootTools
+@implementation HD_RootTools
 + (CGSize)adapterSizeWithString:(NSString *)textStr WithMaxWidth:(CGFloat)width WithFont:(UIFont *)font WithLineSpacing:(CGFloat)lineSpacing {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:lineSpacing];

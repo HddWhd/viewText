@@ -7,15 +7,20 @@
 //
 
 #import "IMLogicModel.h"
+#import "IMDataModel.h"
+
+@interface IMLogicModel()
+
+@end
 
 @implementation IMLogicModel
 + (BOOL) hintShowWithSection:(NSInteger )section{//判断是否需要展示提示内容
     switch (section) {
         case 0:
-            return true;//需要
+            return false;//需要
             break;
         case 4:
-            return false;//不需要
+            return true;//不需要
             break;
             
         default:
@@ -47,5 +52,19 @@
         }
 }
 
+//网络请求类~现在无 模拟数据
++ (NSMutableArray<IMDataModel *> *)urlWithCellHeight:(CGFloat )height{
+    NSMutableArray *dataModelArray = [NSMutableArray array];
+    
+    for (int i = 0 ; i < 5; i ++) {
+        IMDataModel *model = [[IMDataModel alloc]init];
+        
+        model.cellHeight = height;
+        
+        [dataModelArray addObject:model];
+    }
+
+    return dataModelArray;
+}
 
 @end

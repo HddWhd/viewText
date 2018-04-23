@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.89270355504587151" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="9qi-yp-Csr"/>
                             <constraint firstAttribute="trailing" secondItem="iSM-Ay-bp7" secondAttribute="trailing" id="Bj3-NG-XZ9"/>
@@ -69,6 +69,12 @@
                             <constraint firstAttribute="width" constant="140" id="wsE-D9-yNm"/>
                             <constraint firstItem="r6Z-WS-EeO" firstAttribute="top" secondItem="ORI-yL-Uba" secondAttribute="top" constant="6" id="xiT-4G-bWI"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
@@ -81,6 +87,13 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="basicHeight" destination="9qi-yp-Csr" id="ZvY-ci-77l"/>
+                <outlet property="basicView" destination="ORI-yL-Uba" id="XJ6-6w-vjJ"/>
+                <outlet property="basicWidth" destination="wsE-D9-yNm" id="jBJ-wU-gqM"/>
+                <outlet property="contentString" destination="r6Z-WS-EeO" id="Td4-Un-MMf"/>
+                <outlet property="rootImage" destination="iSM-Ay-bp7" id="L7A-ug-6re"/>
+            </connections>
             <point key="canvasLocation" x="49" y="77"/>
         </tableViewCell>
     </objects>

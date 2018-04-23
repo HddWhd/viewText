@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class IMDataModel;
 
 @interface YouTableViewCell : UITableViewCell
-
+@property (nonatomic , strong) IMDataModel *model;
 @end

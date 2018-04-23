@@ -31,11 +31,12 @@
 		E3FEAA10208D899200AF08E2 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA05208D899100AF08E2 /* UIImage+Image.m */; };
 		E3FEAA11208D899200AF08E2 /* UIView+BorderLine.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA07208D899100AF08E2 /* UIView+BorderLine.m */; };
 		E3FEAA12208D899200AF08E2 /* UIImage+Exten.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA09208D899200AF08E2 /* UIImage+Exten.m */; };
-		E3FEAA15208D89A600AF08E2 /* DJQ_RootTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA14208D89A600AF08E2 /* DJQ_RootTools.m */; };
+		E3FEAA15208D89A600AF08E2 /* HD_RootTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA14208D89A600AF08E2 /* HD_RootTools.m */; };
 		E3FEAA18208D89B000AF08E2 /* ToolFunctionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA17208D89B000AF08E2 /* ToolFunctionManager.m */; };
 		E3FEAA27208D930100AF08E2 /* HDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA23208D930100AF08E2 /* HDRootViewController.m */; };
 		E3FEAA28208D930100AF08E2 /* ZYLWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA26208D930100AF08E2 /* ZYLWebController.m */; };
 		E3FEAA2E208DA1B000AF08E2 /* IMLogicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA2D208DA1B000AF08E2 /* IMLogicModel.m */; };
+		E3FEAA31208DB6CF00AF08E2 /* IMDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEAA30208DB6CF00AF08E2 /* IMDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,8 +104,8 @@
 		E3FEAA07208D899100AF08E2 /* UIView+BorderLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderLine.m"; sourceTree = "<group>"; };
 		E3FEAA08208D899100AF08E2 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
 		E3FEAA09208D899200AF08E2 /* UIImage+Exten.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Exten.m"; sourceTree = "<group>"; };
-		E3FEAA13208D89A600AF08E2 /* DJQ_RootTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJQ_RootTools.h; sourceTree = "<group>"; };
-		E3FEAA14208D89A600AF08E2 /* DJQ_RootTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJQ_RootTools.m; sourceTree = "<group>"; };
+		E3FEAA13208D89A600AF08E2 /* HD_RootTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HD_RootTools.h; sourceTree = "<group>"; };
+		E3FEAA14208D89A600AF08E2 /* HD_RootTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HD_RootTools.m; sourceTree = "<group>"; };
 		E3FEAA16208D89B000AF08E2 /* ToolFunctionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolFunctionManager.h; sourceTree = "<group>"; };
 		E3FEAA17208D89B000AF08E2 /* ToolFunctionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolFunctionManager.m; sourceTree = "<group>"; };
 		E3FEAA1C208D8AA500AF08E2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -116,6 +117,8 @@
 		E3FEAA26208D930100AF08E2 /* ZYLWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLWebController.m; sourceTree = "<group>"; };
 		E3FEAA2C208DA1B000AF08E2 /* IMLogicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMLogicModel.h; sourceTree = "<group>"; };
 		E3FEAA2D208DA1B000AF08E2 /* IMLogicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMLogicModel.m; sourceTree = "<group>"; };
+		E3FEAA2F208DB6CF00AF08E2 /* IMDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMDataModel.h; sourceTree = "<group>"; };
+		E3FEAA30208DB6CF00AF08E2 /* IMDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,8 @@
 			children = (
 				E3FEAA2C208DA1B000AF08E2 /* IMLogicModel.h */,
 				E3FEAA2D208DA1B000AF08E2 /* IMLogicModel.m */,
+				E3FEAA2F208DB6CF00AF08E2 /* IMDataModel.h */,
+				E3FEAA30208DB6CF00AF08E2 /* IMDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,8 +281,8 @@
 		E3FEA9F1208D805900AF08E2 /* IMTools */ = {
 			isa = PBXGroup;
 			children = (
-				E3FEAA13208D89A600AF08E2 /* DJQ_RootTools.h */,
-				E3FEAA14208D89A600AF08E2 /* DJQ_RootTools.m */,
+				E3FEAA13208D89A600AF08E2 /* HD_RootTools.h */,
+				E3FEAA14208D89A600AF08E2 /* HD_RootTools.m */,
 				E3FEAA16208D89B000AF08E2 /* ToolFunctionManager.h */,
 				E3FEAA17208D89B000AF08E2 /* ToolFunctionManager.m */,
 			);
@@ -567,11 +572,12 @@
 				E3FEA9E8208D7CC500AF08E2 /* HintLabel.m in Sources */,
 				E3FEAA28208D930100AF08E2 /* ZYLWebController.m in Sources */,
 				E3FEAA0C208D899200AF08E2 /* UIButton+Style.m in Sources */,
-				E3FEAA15208D89A600AF08E2 /* DJQ_RootTools.m in Sources */,
+				E3FEAA15208D89A600AF08E2 /* HD_RootTools.m in Sources */,
 				E3FEAA2E208DA1B000AF08E2 /* IMLogicModel.m in Sources */,
 				E3A708E22089D0F80091C32B /* main.m in Sources */,
 				E3FEAA11208D899200AF08E2 /* UIView+BorderLine.m in Sources */,
 				E3FEAA0D208D899200AF08E2 /* NSString+Time.m in Sources */,
+				E3FEAA31208DB6CF00AF08E2 /* IMDataModel.m in Sources */,
 				E3FEAA18208D89B000AF08E2 /* ToolFunctionManager.m in Sources */,
 				E3FEAA0A208D899200AF08E2 /* UIColor+HexString.m in Sources */,
 				E3FEA9E9208D7CC500AF08E2 /* HeadView.m in Sources */,
@@ -750,13 +756,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93R5DV36F2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/wuhaidong/Desktop/viewText/viewText/OverAllFile/PrefixHeader.pch;
 				INFOPLIST_FILE = viewText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cocoa.viewText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -766,13 +774,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93R5DV36F2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/wuhaidong/Desktop/viewText/viewText/OverAllFile/PrefixHeader.pch;
 				INFOPLIST_FILE = viewText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cocoa.viewText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

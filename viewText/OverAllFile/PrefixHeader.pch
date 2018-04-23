@@ -28,6 +28,7 @@
 #import "UIFont+SelectFrame.h"
 #import "UIView+BorderLine.h"
 #import "UIView+ReRect.h"
+#import "HD_RootTools.h"
 
 #import "ViewText_Header.h"
 #import "ViewText_Define_Header.h"

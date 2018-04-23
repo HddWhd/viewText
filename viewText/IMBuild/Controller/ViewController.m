@@ -12,6 +12,7 @@
 #import "HintLabel.h"
 #import "HeadView.h"
 #import "IMLogicModel.h"
+#import "IMDataModel.h"
 
 #define MeCellID @"MeCellID"
 #define YouCellID @"YouCellID"
@@ -28,13 +29,17 @@
 @property (nonatomic , strong) NSArray *dataArray;
 
 @property (nonatomic , strong) HeadView *headView;
+
+@property (nonatomic , strong) NSMutableArray<IMDataModel *> *dataModelArray;
+
+@property (nonatomic , strong) NSMutableArray *heightArray;
 @end
 
 @implementation ViewController
 
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 30, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 30, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 85)];
         
         _tableView.delegate = self;
         
@@ -95,6 +100,20 @@
     return _headView;
 }
 
+- (NSMutableArray<IMDataModel *> *)dataModelArray{
+    if (!_dataModelArray) {
+        _dataModelArray = [NSMutableArray array];
+    }
+    return _dataModelArray;
+}
+
+- (NSMutableArray *)heightArray{
+    if (!_heightArray) {
+        _heightArray = [NSMutableArray array];
+    }
+    return _heightArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -102,15 +121,19 @@
     
     self.dataArray = @[@"切换", @"对话" , @"充值" , @"提现" , @"通讯录"];
     
-    [self.view addSubview:self.headView];
-    
     [self.view addSubview:self.tableView];
     
     [self.view addSubview:self.textRootView];
     
     [self.textRootView addSubview:self.stringTextView];
     
+    [self.view addSubview:self.headView];
+    
     [self creatButton];
+    
+    self.dataModelArray = [IMLogicModel urlWithCellHeight:70.0f];
+    
+    [self.tableView reloadData];
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -127,15 +150,21 @@
 
 #pragma mark tableViewDelegate
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return self.dataModelArray.count;
 }
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 70;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *height = self.heightArray[indexPath.section];
+    
+    return height.floatValue;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -152,8 +181,16 @@
     }
     
     if ([IMLogicModel IMTableViewCellStyleWithCand:indexPath.section] == IMTableViewCellStyleRight){
+        meCell.model = self.dataModelArray[indexPath.section];
+        
+        [self.heightArray addObject:[@(meCell.model.cellHeight) stringValue]];
+        
         return meCell;
     }else{
+        youCell.model = self.dataModelArray[indexPath.section];
+        
+        [self.heightArray addObject:[@(youCell.model.cellHeight) stringValue]];
+        
         return youCell;
     }
     

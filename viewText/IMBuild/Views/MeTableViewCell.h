@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class IMDataModel;
 
 @interface MeTableViewCell : UITableViewCell
+
+@property (nonatomic , strong) IMDataModel *model;
 
 @end
